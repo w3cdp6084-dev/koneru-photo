@@ -1,5 +1,5 @@
 {
-  "name": "@example/blog",
+  "name": "koneruPhoto",
   "type": "module",
   "version": "0.0.1",
   "private": true,
@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^0.11.1",
+    "@astrojs/react": "^1.1.4",
     "@astrojs/rss": "^1.0.1",
     "@astrojs/sitemap": "^1.0.0",
     "@astrojs/tailwind": "^2.0.1",
