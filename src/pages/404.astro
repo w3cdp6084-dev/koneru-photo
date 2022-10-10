@@ -3,7 +3,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-import Resets from '@julian_cataldo/astro-resets/Resets.astro';
 ---
 <!DOCTYPE html>
 <html lang="ja">
@@ -37,9 +36,9 @@ import Resets from '@julian_cataldo/astro-resets/Resets.astro';
 	</head>
 	<body>
 		<Header />
-		<main>
-            <h1>404</h1>
-            <h2>🐱ページがありません🐱</h2>
+		<main class="my-10">
+            <h1 class="text-8xl font-bold">404</h1>
+            <h2 class="text-center text-2xl">🐱ページがありません🐱</h2>
         </main>
 		<Footer />
 	</body>
