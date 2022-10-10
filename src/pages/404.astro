@@ -32,14 +32,24 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
             h2{
                 font-size: 8rem;
             }
+            .wrap{
+
+            }
+            .content{
+                position: absolute;
+                left: calc(50% - 150px);
+                top: calc(50% - 100px);
+            }
 		</style>
 	</head>
 	<body>
 		<Header />
-		<main class="my-10">
-            <h1 class="text-8xl font-bold">404</h1>
-            <h2 class="text-center text-2xl">🐱ページがありません🐱</h2>
-        </main>
+        <div class="wrap">
+            <main class="content">
+                <h1 class="text-8xl font-bold">404</h1>
+                <h2 class="text-center text-2xl">🐱ページがありません🐱</h2>
+            </main>
+        </div>
 		<Footer />
 	</body>
 </html>
