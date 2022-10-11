@@ -25,6 +25,37 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 			ul li a:visited {
 				color: #8e32dc;
 			}
+            .main{
+                max-width: 1280px;
+                margin: 0 auto;
+            }
+            .content{
+                margin: 200px 0 0 0;
+                position: relative;
+            }
+            .content p{
+                text-align: center;
+                
+            }
+            .content dl{
+                text-align: center;
+                margin: 24px 0 0 0;
+                line-height: 1.8;
+            }
+            .content dt{
+                font-weight: bold;
+                font-size: 16px;
+            }
+            .content dd{
+                font-weight: normal;
+                font-size: 16px;
+            }
+            .indexLink{
+                font-weight: bold;
+                position: absolute;
+                bottom: 20%;
+                right: 8%;
+            }
 		</style>
 	</head>
 	<Body>
@@ -33,7 +64,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
 			<div class="content">
 				<p>
 					自身の日常を切り取った博物館のようなものです。<br>
-                    インスタの世界は自身に合わなかったので、自己で制作。<br>
+                    インスタの世界は自身に合わなかったので、自己で制作しました。<br>
                     ここにアップしていきます。
 				</p>
                 <dl>
@@ -43,6 +74,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
                     <dd>React.js💻</dd>
                 </dl>
 			</div>
+            <div class="indexLink">
+                <a href="/">BACK</a>
+            </div>
 		</main>
 		<Footer />
 	</Body>

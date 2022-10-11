@@ -10,7 +10,8 @@ body {
 	font-family: Montserrat, sans-serif;
 	margin: auto;
 	padding: 20px;
-	max-width: 65ch;
+	width: 100%;
+	max-width: 100%;
 	min-height: 100vh;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
