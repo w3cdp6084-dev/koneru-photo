@@ -1,0 +1,62 @@
+---
+import Container from "@components/Container";
+import Footer from "@components/Footer";
+import Header from "@components/Header";
+export interface Props {
+	title: string;
+  description?: string;
+}
+const { title, description } = Astro.props as Props;
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" href="/favicons/favicon.ico" />
+    <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{`${title} | KyoyaDev`}</title>
+    <meta name="description" content={description || 'This site is KyoyaDev Blog and portfolio.'} />
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://kyoya.dev">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content={`${title} | KyoyaDev`}>
+    <meta property="og:description" content={description ?? 'This site is KyoyaDev Blog and portfolio.'}>
+    <meta property="og:image" content="https://kyoya.dev/ogp.jpg">
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary">
+    <meta property="twitter:domain" content="kyoya.dev">
+    <meta property="twitter:url" content="https://kyoya.dev">
+    <meta name="twitter:title" content={`${title} | KyoyaDev`}>
+    <meta name="twitter:description" content={description ?? 'This site is KyoyaDev Blog and portfolio.'}>
+    <meta name="twitter:image" content="https://kyoya.dev/ogp-small.png">
+	</head>
+	<body class="dark:bg-primary bg-soft-white dark:text-soft-white">
+    <div class="min-h-screen grid grid-rows-[auto_1fr_auto] grid-cols-[100%] overflow-hidden">
+      <Header client:load/>
+      <main>
+        <Container className="py-5 md:pt-10 md:pb-16">
+          <slot />
+        </Container>
+      </main>
+      <Footer/>
+    </div>
+  </body>
+</html>
+
+<script is:inline>
+  // チラツキ防止
+  // localStorageにデータがあるときはそちらを適用
+  if(typeof window.localStorage.getItem('theme') === 'string'){
+    const currentTheme = window.localStorage.getItem('theme');
+    if(currentTheme === 'dark'){
+      document.documentElement.classList.add('dark');
+    }
+  }
+  // localStorageになにもない時はmatchMediaで判定
+  if (!typeof window.localStorage.getItem('theme') === 'string' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.documentElement.classList.add('dark');
+  }
+</script>

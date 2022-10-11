@@ -1,6 +1,7 @@
 ---
 import HeaderLink from './HeaderLink.astro';
 import { SITE_TITLE } from '../config';
+import ThemeToggleButton from './ThemeToggleButton';
 ---
 
 <header>
@@ -14,6 +15,7 @@ import { SITE_TITLE } from '../config';
 		<HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">Twitter</HeaderLink>
 		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
 	</nav>
+	<ThemeToggleButton />
 </header>
 <style>
 	header {

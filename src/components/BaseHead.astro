@@ -36,3 +36,16 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props;
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<script is:inline>
+	if(typeof window.localStorage.getItem('theme') === 'string'){
+	  const currentTheme = window.localStorage.getItem('theme');
+	  if(currentTheme === 'dark'){
+		document.documentElement.classList.add('dark');
+	  }
+	}
+
+	if (!typeof window.localStorage.getItem('theme') === 'string' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+	  document.documentElement.classList.add('dark');
+	}
+  </script>
