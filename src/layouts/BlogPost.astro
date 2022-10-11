@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import Body from '../components/Body.astro'
 import "../styles/global.css"
 export interface Props {
 	content: {
@@ -33,7 +34,7 @@ const {
 		</style>
 	</head>
 
-	<body class="dark:bg-primary bg-soft-white dark:text-soft-white">
+	<Body>
 		<Header/>
 		<main>
 			<article>
@@ -53,5 +54,5 @@ const {
 			</article>
 		</main>
 		<Footer />
-	</body>
+	</Body>
 </html>
